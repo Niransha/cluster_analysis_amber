@@ -13,7 +13,7 @@
 last=`ls -l ../md_*.mdcrd | awk '{split($9,a,"/"); split(a[2],b,"_"); split(b[2],c,"."); print c[1] }' | sort -nk1 | tail -1`
 
 ###################################
-#load amber 18 on atlas
+#load amber 18 on hpc
 ###################################
 source /opt/ohpc/pub/apps/rnachem/amber18_gpu/amber.sh
 source /opt/ohpc/pub/apps/rnachem/amber18_gpu/modules2load.txt
