@@ -1,0 +1,146 @@
+
+CPPTRAJ: Trajectory Analysis. V4.14.0 (AmberTools V19.09)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 01/10/23 12:33:19
+| Available memory: 117.540 GB
+
+INPUT: Reading input from 'input_combine'
+  [parm ../prmtop.new]
+	Reading '../prmtop.new' as Amber Topology
+	Radius Set: H(N)-modified Bondi radii (mbondi2)
+  [for i=1;i<10;i++]
+    Setting up 'for' loop.
+	Loop will execute for 9 iterations.
+CONTROL: Starting control block.
+  BLOCK  0: for (($i=1; $i<10; $i+=1)) do
+  [trajin ../md_$i.mdcrd 0 last 10]
+	Added command 'trajin' to control block 0.
+  [done]
+  BLOCK  0: END
+CONTROL: Executing 1 control block(s).
+  [trajin ../md_1.mdcrd 0 last 10]
+	Reading '../md_1.mdcrd' as Amber NetCDF
+Warning: start argument is 0, setting to 1.
+  [trajin ../md_2.mdcrd 0 last 10]
+	Reading '../md_2.mdcrd' as Amber NetCDF
+Warning: start argument is 0, setting to 1.
+  [trajin ../md_3.mdcrd 0 last 10]
+	Reading '../md_3.mdcrd' as Amber NetCDF
+Warning: start argument is 0, setting to 1.
+  [trajin ../md_4.mdcrd 0 last 10]
+	Reading '../md_4.mdcrd' as Amber NetCDF
+Warning: start argument is 0, setting to 1.
+  [trajin ../md_5.mdcrd 0 last 10]
+	Reading '../md_5.mdcrd' as Amber NetCDF
+Warning: start argument is 0, setting to 1.
+  [trajin ../md_6.mdcrd 0 last 10]
+	Reading '../md_6.mdcrd' as Amber NetCDF
+Warning: start argument is 0, setting to 1.
+  [trajin ../md_7.mdcrd 0 last 10]
+	Reading '../md_7.mdcrd' as Amber NetCDF
+Warning: start argument is 0, setting to 1.
+  [trajin ../md_8.mdcrd 0 last 10]
+	Reading '../md_8.mdcrd' as Amber NetCDF
+Warning: start argument is 0, setting to 1.
+  [trajin ../md_9.mdcrd 0 last 10]
+	Reading '../md_9.mdcrd' as Amber NetCDF
+Warning: start argument is 0, setting to 1.
+CONTROL: Control block finished.
+
+  [image center familiar]
+    IMAGE: By molecule to box center based on center of mass using all atoms
+           Triclinic On, familiar shape.
+  [strip :Cl-]
+    STRIP: Stripping atoms in mask [:Cl-]
+  [strip :Na+]
+    STRIP: Stripping atoms in mask [:Na+]
+  [strip :WAT outprefix strip]
+    STRIP: Stripping atoms in mask [:WAT]
+	Stripped topology will be output with prefix 'strip'
+  [trajout combined_md.mdcrd netcdf]
+	Writing 'combined_md.mdcrd' as Amber NetCDF
+  [go]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: prmtop.new, 6255 atoms, 2050 res, box: Trunc. Oct., 2047 mol, 2043 solvent
+
+INPUT TRAJECTORIES (9 total):
+ 0: 'md_1.mdcrd' is a NetCDF AMBER trajectory with coordinates, time, box, Parm prmtop.new (Trunc. Oct. box) (reading 100 of 1000)
+ 1: 'md_2.mdcrd' is a NetCDF AMBER trajectory with coordinates, time, box, Parm prmtop.new (Trunc. Oct. box) (reading 100 of 1000)
+ 2: 'md_3.mdcrd' is a NetCDF AMBER trajectory with coordinates, time, box, Parm prmtop.new (Trunc. Oct. box) (reading 100 of 1000)
+ 3: 'md_4.mdcrd' is a NetCDF AMBER trajectory with coordinates, time, box, Parm prmtop.new (Trunc. Oct. box) (reading 100 of 1000)
+ 4: 'md_5.mdcrd' is a NetCDF AMBER trajectory with coordinates, time, box, Parm prmtop.new (Trunc. Oct. box) (reading 100 of 1000)
+ 5: 'md_6.mdcrd' is a NetCDF AMBER trajectory with coordinates, time, box, Parm prmtop.new (Trunc. Oct. box) (reading 100 of 1000)
+ 6: 'md_7.mdcrd' is a NetCDF AMBER trajectory with coordinates, time, box, Parm prmtop.new (Trunc. Oct. box) (reading 100 of 1000)
+ 7: 'md_8.mdcrd' is a NetCDF AMBER trajectory with coordinates, time, box, Parm prmtop.new (Trunc. Oct. box) (reading 100 of 1000)
+ 8: 'md_9.mdcrd' is a NetCDF AMBER trajectory with coordinates, time, box, Parm prmtop.new (Trunc. Oct. box) (reading 100 of 1000)
+  Coordinate processing will occur on 900 frames.
+
+OUTPUT TRAJECTORIES (1 total):
+  'combined_md.mdcrd' (900 frames) is a NetCDF AMBER trajectory
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'prmtop.new' (4 actions):
+  0: [image center familiar]
+	Mask [*] corresponds to 6255 atoms.
+	Number of molecules to be imaged is 2047
+  1: [strip :Cl-]
+	Stripping 0 atoms.
+Warning: No atoms to strip. Skipping 'strip' for topology 'prmtop.new'
+Warning: Setup incomplete for [strip]: Skipping
+  2: [strip :Na+]
+	Stripping 3 atoms.
+	Stripped topology: 6252 atoms, 2047 res, box: Trunc. Oct., 2044 mol, 2043 solvent
+  3: [strip :WAT outprefix strip]
+	Stripping 6129 atoms.
+	Stripped topology: 123 atoms, 4 res, box: Trunc. Oct., 1 mol
+	Writing topology 0 (prmtop.new) to 'strip.prmtop.new' with format Amber Topology
+.....................................................
+ACTIVE OUTPUT TRAJECTORIES (1):
+  combined_md.mdcrd (coordinates, time, box)
+----- md_1.mdcrd (1-1000, 10) -----
+ 0% 10% 
+----- md_2.mdcrd (1-1000, 10) -----
+20% 
+----- md_3.mdcrd (1-1000, 10) -----
+30% 
+----- md_4.mdcrd (1-1000, 10) -----
+40% 
+----- md_5.mdcrd (1-1000, 10) -----
+50% 
+----- md_6.mdcrd (1-1000, 10) -----
+60% 
+----- md_7.mdcrd (1-1000, 10) -----
+70% 
+----- md_8.mdcrd (1-1000, 10) -----
+80% 
+----- md_9.mdcrd (1-1000, 10) -----
+90% 100% Complete.
+
+Read 900 frames and processed 900 frames.
+TIME: Avg. throughput= 264.5508 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+RUN TIMING:
+TIME:		Init               : 0.0001 s (  0.00%)
+TIME:		Trajectory Process : 3.4020 s ( 99.95%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0000 s (  0.00%)
+TIME:		Other              : 0.0016 s (  0.00%)
+TIME:	Run Total 3.4036 s
+---------- RUN END ---------------------------------------------------
+TIME: Total execution time: 3.5494 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+

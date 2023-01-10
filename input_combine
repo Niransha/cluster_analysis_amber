@@ -1,0 +1,13 @@
+parm ../prmtop.new
+
+for i=1;i<10;i++
+   trajin ../md_$i.mdcrd 0 last 10
+
+done
+
+image center familiar
+strip :Cl-
+strip :Na+
+strip :WAT outprefix strip
+trajout combined_md.mdcrd netcdf
+go
